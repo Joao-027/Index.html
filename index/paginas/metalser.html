@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../Imagens/metalser.png);
+            background-size: cover;
+            background-position: center;
+            width: 30%;
+            height: 80vh;
+        }
+        div{
+            background-color:rgba(0, 68, 255, 0.3);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 50px;
+            border-radius: 15px;
+            color: #fff;
+        }
+        input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        .button{
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: rgb(255, 241, 241);
+            font-size: 15px;
+            
+        }
+        button:hover{
+            background-color:rgba(0, 68, 255, 0.8);
+            cursor: pointer;
+        }
+        .Enviar{
+            background-color: black;
+        }
+
+    </style>
+    <style>
+     button{
+        color: #ffffff;
+        background: transparent;
+        border:solid 1px #9c9797a2;
+        padding: 5px;
+        border-radius: 15px;
+        font-size: 12px;
+        cursor: pointer;
+        width: 150px;
+
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <input type="text" placeholder="login" id="login">
+        <input type="password" placeholder="Senha" id="senha">
+        <input type="submit" onclick="logar()">
+    </div>
+    <button onclick="voltar()">Voltar</button>
+<script>
+    function logar(){
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('senha').value;
+
+        if(login == "admin" && senha == "admin"){
+            alert("sucesso");
+        }else{
+            alert('usuario ou senha incorretos');
+        }
+    } 
+</script>
+<script>
+function voltar()
+{
+    window.location.href="../index.html"
+}
+</script>
+</body>
